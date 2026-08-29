@@ -1,0 +1,36 @@
+nexus installation scripts for setup
+
+--> yum install java-21-amazon-corretto -y
+
+# do not install nexus in root or any user account --> specific or default folder is available in server ---> opt/
+
+# nexus download in linux url -- https://help.sonatype.com/en/install-nexus-repository.html
+
+--> cd /opt
+--> wget https://download.sonatype.com/nexus/3/nexus-3.95.3-02-linux-x86_64.tar.gz
+
+# now we need to untar of gz file
+
+--> tar -zxvf nexus  enter-Tab
+
+after it looks like this 
+//
+drwxr-xr-x. 6 root root        94 Aug 29 16:17 nexus-3.95.3-02
+-rw-r--r--. 1 root root 531959835 Aug 29 16:16 nexus-3.95.3-02-linux-x86_64.tar.gz
+drwxr-xr-x. 3 root root        20 Aug 27 16:22 sonatype-work
+//
+
+--> cd /nexus-3.95.3-02
+--> cd /bin
+--> ./nexus start
+//
+  when we start this, it will show a msg called : Detect execution as "root" user. this is not recommended!
+  why --> because he only declaring that with in the root user nexus doesn't have permission so creat new user and run there
+
+  so, go to /opt folder and creat a user called nexus and provide permissions to both nexus-3.95.3-02 / sonatype-work
+//
+--> userdd nexus
+--> chown -R nexus:nexus-3.95.3-02 sonatype-work/
+
+
+--> ./nexus run
