@@ -30,7 +30,34 @@ drwxr-xr-x. 3 root root        20 Aug 27 16:22 sonatype-work
   so, go to /opt folder and creat a user called nexus and provide permissions to both nexus-3.95.3-02 / sonatype-work
 //
 --> userdd nexus
+
+#back to root user and opt folder
+
 --> chown -R nexus:nexus-3.95.3-02 sonatype-work/
+--> ls -lrt  
 
+# you able to see root --> nexus is changed owner to all the permissions
 
+//
+drwxr-xr-x. 4 root root        33 Aug 12 03:10 aws
+drwxr-xr-x. 6 root root        94 Aug 29 16:17 nexus-3.95.3-02
+-rw-r--r--. 1 root root 531959835 Aug 29 16:16 nexus-3.95.3-02-linux-x86_64.tar.gz
+drwxr-xr-x. 3 root root        20 Aug 27 16:22 sonatype-work
+[root@Nexus opt]# chown -R nexus:nexus nexus-3.95.3-02 sonatype-work/
+[root@Nexus opt]# ll
+total 519496
+drwxr-xr-x. 4 root  root         33 Aug 12 03:10 aws
+drwxr-xr-x. 6 nexus nexus        94 Aug 29 16:17 nexus-3.95.3-02
+-rw-r--r--. 1 root  root  531959835 Aug 29 16:16 nexus-3.95.3-02-linux-x86_64.tar.gz
+drwxr-xr-x. 3 nexus nexus        20 Aug 27 16:22 sonatype-work
+//
+
+# go to nexus user
+--> sudo su - nexus
+--> cd /opt 
+--> ls -lrt
+--> cd /nexus-3.95.3-02
+--> cd /bin
+--> ls -lrt
+--> ./nexus start ----> it will take some time
 --> ./nexus run
