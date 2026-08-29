@@ -59,5 +59,9 @@ drwxr-xr-x. 3 nexus nexus        20 Aug 27 16:22 sonatype-work
 --> cd /nexus-3.95.3-02
 --> cd /bin
 --> ls -lrt
---> ./nexus start ----> it will take some time
+--> ./nexus start ----> it will take some time and it will open dashboard then choose
+username - admin
+pass : cat shown in the login interface
+
+
 --> ./nexus run
