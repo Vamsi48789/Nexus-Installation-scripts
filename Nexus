@@ -63,5 +63,6 @@ drwxr-xr-x. 3 nexus nexus        20 Aug 27 16:22 sonatype-work
 username - admin
 pass : cat shown in the login interface
 
+it will suggest us to create a new pass with lenth of 8 characters -- 48624862 and login again by clicking on the user account icon
 
---> ./nexus run
+
