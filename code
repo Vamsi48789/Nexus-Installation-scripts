@@ -1,0 +1,13 @@
+Launch instance with 20gb of ebs volume with 8081 port
+https://help.sonatype.com/en/download.html
+
+# Check everytime the version will change and cp link address
+
+cd /opt/
+https://download.sonatype.com/nexus/3/nexus-3.96.3-01-linux-x86_64.tar.gz
+tar -zxvf nexus-3.96.3-01-linux-x86_64.tar.gz
+useradd nexus
+chown -R nexus:nexus nexus-3.96.3-01 sonatype-work/
+sudo su - nexus
+cd /opt/nexus-3.96.3-01/bin
+./nexus start
