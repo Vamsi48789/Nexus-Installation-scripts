@@ -4,10 +4,11 @@ https://help.sonatype.com/en/download.html
 # Check everytime the version will change and cp link address
 
 cd /opt/
-https://download.sonatype.com/nexus/3/nexus-3.96.3-01-linux-x86_64.tar.gz
-tar -zxvf nexus-3.96.3-01-linux-x86_64.tar.gz
+
+wget https://download.sonatype.com/nexus/3/nexus-3.96.4-01-linux-x86_64.tar.gz
+tar -zxvf nexus-3.96.4-01-linux-x86_64.tar.gz
 useradd nexus
-chown -R nexus:nexus nexus-3.96.3-01 sonatype-work/
+chown -R nexus:nexus nexus-3.96.4-01 sonatype-work/
 sudo su - nexus
-cd /opt/nexus-3.96.3-01/bin
+cd /opt/nexus-3.96.4-01/bin
 ./nexus start
